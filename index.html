@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaVoice AI | Voice Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="brand"><span class="brand-icon">◉</span> LinguaVoice <span class="ai">AI</span></a>
+    <span class="status"><span class="dot"></span> Voice translation studio</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">✦ YOUR WORLD, YOUR LANGUAGE</span>
+      <h1>Every voice has a <span>meaning.</span></h1>
+      <p>Translate words, discover languages, and let your voice travel further.</p>
+    </section>
+
+    <section class="translator">
+      <div class="language-bar">
+        <div class="language">
+          <label for="sourceLang">TRANSLATE FROM</label>
+          <select id="sourceLang">
+            <option value="en">🇬🇧 English</option>
+            <option value="ta">🇮🇳 Tamil</option>
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="te">🇮🇳 Telugu</option>
+            <option value="ml">🇮🇳 Malayalam</option>
+            <option value="kn">🇮🇳 Kannada</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="de">🇩🇪 German</option>
+            <option value="ja">🇯🇵 Japanese</option>
+            <option value="zh-CN">🇨🇳 Chinese</option>
+            <option value="ar">🇸🇦 Arabic</option>
+          </select>
+        </div>
+
+        <button id="swapBtn" class="swap" title="Swap languages" aria-label="Swap languages">⇄</button>
+
+        <div class="language">
+          <label for="targetLang">TRANSLATE TO</label>
+          <select id="targetLang">
+            <option value="ta">🇮🇳 Tamil</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="te">🇮🇳 Telugu</option>
+            <option value="ml">🇮🇳 Malayalam</option>
+            <option value="kn">🇮🇳 Kannada</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="de">🇩🇪 German</option>
+            <option value="ja">🇯🇵 Japanese</option>
+            <option value="zh-CN">🇨🇳 Chinese</option>
+            <option value="ar">🇸🇦 Arabic</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="translation-grid">
+        <div class="text-panel">
+          <div class="panel-heading">
+            <span>Your message</span>
+            <span id="charCount">0 / 2000</span>
+          </div>
+          <textarea id="sourceText" maxlength="2000"
+            placeholder="Type something to translate...&#10;&#10;Try: Hello, how are you?"></textarea>
+          <div class="panel-footer">
+            <button id="micBtn" class="tool-btn">🎙 <span>Speak</span></button>
+            <button id="clearBtn" class="tool-btn">✕ <span>Clear</span></button>
+          </div>
+        </div>
+
+        <div class="text-panel result-panel">
+          <div class="panel-heading">
+            <span>Translation</span>
+            <span class="ai-tag">✦ AI powered</span>
+          </div>
+          <div id="resultText" class="result-text" aria-live="polite">
+            <span class="placeholder">Your translation will appear here...</span>
+          </div>
+          <div class="panel-footer">
+            <button id="listenBtn" class="tool-btn" disabled>🔊 <span>Listen</span></button>
+            <button id="copyBtn" class="tool-btn" disabled>▣ <span>Copy</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <button id="translateBtn" class="translate-btn">✦ Translate now <span>→</span></button>
+        <p id="message" role="status">Your words, understood around the world.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon purple">🎙</div>
+        <h3>Voice input</h3>
+        <p>Speak naturally using your microphone.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon blue">🌐</div>
+        <h3>12 languages</h3>
+        <p>Translate across languages and cultures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon green">🔊</div>
+        <h3>Voice playback</h3>
+        <p>Listen to your translated message.</p>
+      </div>
+    </section>
+
+    <footer>© 2026 LinguaVoice AI · Language brings us together.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
